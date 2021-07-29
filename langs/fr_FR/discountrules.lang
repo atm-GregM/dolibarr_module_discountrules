@@ -27,6 +27,7 @@ Apply=Appliquer
 DiscountRulesUpdateLines=Mise à jour des produits
 productReapply=Mettre à jour la description
 priceReapply=Mettre à jour le prix
+updateLinesInvoice=Facture(Brouillon) Prix/Description
 
 # Module label 'ModulediscountrulesName'
 ModulediscountrulesName = Règles de remise

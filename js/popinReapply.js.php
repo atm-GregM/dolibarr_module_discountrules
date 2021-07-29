@@ -152,6 +152,7 @@ var reapplyDiscount = {};
         // Display all invoice products lines
         divReapply.load(documentUrl + "&action=selectlines #tablelines", function () {
 
+            o.initToolTip($('#divReapply .classfortooltip'));
             // Check all checkboxes at once
             $(".linecolcheckall > input").first().on('change', function () {
                 if ($(".linecolcheckall > input").is(':checked')) {
