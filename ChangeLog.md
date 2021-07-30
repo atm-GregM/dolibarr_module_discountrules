@@ -1,6 +1,9 @@
+
 # CHANGELOG FOR DISCOUNTRULES MODULE
 
 ## Not Released
+
+- NEW : Add mass actions for lines on document *30/07/2021* - 2.10.0
 
 ## 2.9
 

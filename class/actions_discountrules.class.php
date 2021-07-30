@@ -112,11 +112,11 @@ class Actionsdiscountrules
 
                 $TLinesCheckbox = GETPOST("line_checkbox", 'array');
                 $priceReapply = GETPOST("price-reapply", 'int');
-                $productReapply = GETPOST("product-reapply", 'int');
+                $descriptionProduct = GETPOST("product-reapply", 'int');
 
                 if(empty($TLinesCheckbox)){
-                    // TODO c'est pas normale message evenement
-                    //setEventMessage();
+                    setEventMessage("RequestError");
+                    return -1;
                 }
 
                 // Vérifier les droits avant d'agir
@@ -143,7 +143,7 @@ class Actionsdiscountrules
                     }
 
 
-                    if($productReapply) { // TODO changer le nom de ce truc
+                    if($descriptionProduct) {
                         $product = new Product($object->db);
                         $resFetchProd = $product->fetch($line->fk_product);
                         if($resFetchProd>0){
@@ -151,9 +151,9 @@ class Actionsdiscountrules
                                 $line->desc = $product->description;
                                 $lineToUpdate = true;
                             }
-                        }
-                        else{
-                            // TODO error
+                        }else{
+                            setEventMessage("RequestError");
+                            return -1;
                         }
 
                     }
